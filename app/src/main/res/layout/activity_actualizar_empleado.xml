@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActualizarEmpleadoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualizar Información de Vendedor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/etIdVendedor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID de Vendedor a buscar"
+            android:inputType="number"
+            android:maxLength="10"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnBuscarActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar Vendedor para Editar"
+            android:layout_marginBottom="32dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#606060"
+            android:layout_marginBottom="32dp"/>
+
+        <TextView
+            android:id="@+id/tvTituloDatos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Datos del Vendedor (ID: ?)"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"/> <LinearLayout
+        android:id="@+id/layoutDatosActualizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"> <EditText
+        android:id="@+id/etNombreActualizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etApellido1Actualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Primer Apellido"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etApellido2Actualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Segundo Apellido (Opcional)"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etSalarioBaseActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Salario Base"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etPorcentajeComisionActualizar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Porcentaje de Comisión (Ej: 0.05)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="24dp"/>
+
+        <Button
+            android:id="@+id/btnGuardarCambios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Cambios"/>
+
+    </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textColor="#F44336"
+            android:text=""/>
+
+    </LinearLayout>
+</ScrollView>

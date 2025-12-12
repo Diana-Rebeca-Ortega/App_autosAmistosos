@@ -11,6 +11,7 @@ public class DashboardDueñoActivity extends AppCompatActivity {
     private Button btnRegistrarEmpleado;
     private Button btnConsultarEmpleado;
     private Button btnListarEmpleado;
+    private Button btnActualizarEmpleado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +20,7 @@ public class DashboardDueñoActivity extends AppCompatActivity {
         btnRegistrarEmpleado = findViewById(R.id.btn_registrar_empleado);
         btnConsultarEmpleado = findViewById(R.id.btn_consultar_empleado);
         btnListarEmpleado = findViewById(R.id.btn_listar_empleado);
+        btnActualizarEmpleado = findViewById(R.id.btn_actualizar_empleado); // Inicializar
         // Listener para el botón de Alta de Empleado
         btnRegistrarEmpleado.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +43,13 @@ public class DashboardDueñoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DashboardDueñoActivity.this, ConsultaListaActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnActualizarEmpleado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardDueñoActivity.this, ActualizarEmpleadoActivity.class);
                 startActivity(intent);
             }
         });
