@@ -25,6 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity"/>
+        <activity android:name=".DashboardDueñoActivity"/>
+        <activity android:name=".RegistroEmpleadoActivity"/>
     </application>
 
 </manifest>

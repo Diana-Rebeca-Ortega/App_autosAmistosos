@@ -30,7 +30,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText editTextUser;
     private EditText editTextPassword;
     private Button buttonIngresar;
-    private static final String LOGIN_URL = "http://10.0.2.2/PROYECTO/autos_api/login.php";
+    private static final String LOGIN_URL = "http://192.168.1.87/PROYECTO/autos_api/login.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,15 +84,15 @@ public class LoginActivity extends AppCompatActivity {
                                 // Éxito en el Login
                                 String rol = jsonObject.getString("rol");
                                 Toast.makeText(LoginActivity.this, "¡Login Exitoso! Rol: " + rol, Toast.LENGTH_LONG).show();
-
-                                // ------------------------------------------
-                                // AQUI VA LA NAVEGACIÓN SEGÚN EL ROL
-                                // ------------------------------------------
-                                // Ejemplo: if (rol.equals("dueño")) {
-                                //             Intent intent = new Intent(LoginActivity.this, DashboardDueñoActivity.class);
-                                //             startActivity(intent);
-                                //          }
-
+                            //  'dueño' usan este panel:
+                                if (rol.equals("dueno") || rol.equals("administrador")) {
+                                    Intent intent = new Intent(LoginActivity.this, DashboardDueñoActivity.class);
+                                    startActivity(intent);
+                                    finish(); // Cierra el login para que el usuario no pueda volver con el botón 'Atrás'
+                                } else {
+                                    // Ejemplo para otros roles (vendedor)
+                                    Toast.makeText(LoginActivity.this, "Acceso no implementado para este rol: " + rol, Toast.LENGTH_SHORT).show();
+                                }
                             } else {
                                 // Login Fallido (Credenciales incorrectas)
                                 Toast.makeText(LoginActivity.this, "Error: " + message, Toast.LENGTH_SHORT).show();

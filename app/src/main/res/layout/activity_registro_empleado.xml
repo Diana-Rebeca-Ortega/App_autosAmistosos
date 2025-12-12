@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroEmpleadoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alta de Nuevo Vendedor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre(s)"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etApellido1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Primer Apellido"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etApellido2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Segundo Apellido (Opcional)"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etSalarioBase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Salario Base"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/etPorcentajeComision"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Porcentaje de Comisión (Ej: 0.05)"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="24dp"/>
+
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar Vendedor"/>
+
+    </LinearLayout>
+</ScrollView>
