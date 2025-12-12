@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_login"  android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/background_login_image"
+        android:layout_width="0dp"  android:layout_height="0dp" android:contentDescription="Imagen de fondo del castillo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/carrologin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#A6000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp" android:text="Login"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"  app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_user"
+        android:layout_width="0dp"  android:layout_height="wrap_content" android:layout_marginTop="40dp"
+        android:hint="Usuario"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@android:color/white"  android:textColor="@android:color/white"      app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_login_title"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <EditText
+        android:id="@+id/edit_text_password"
+        android:layout_width="0dp"  android:layout_height="wrap_content" android:layout_marginTop="16dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:textColorHint="@android:color/white"  android:textColor="@android:color/white"      app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_user"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+    <Button
+        android:id="@+id/button_ingresar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="INGRESAR"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
