@@ -6,35 +6,39 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center_horizontal"
-    tools:context=".DashboardDueñoActivity">
+    tools:context=".ConsultaEmpleadoActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido Gerente"
-        android:textSize="28sp"
+        android:text="Buscar Información de Vendedor"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
+        android:layout_marginBottom="24dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/etIdVendedor"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Panel de Control de Empleados"
-        android:textSize="20sp"
+        android:hint="Ingrese ID de Vendedor a buscar"
+        android:inputType="number"
+        android:maxLength="10"
         android:layout_marginBottom="16dp"/>
 
     <Button
-        android:id="@+id/btn_registrar_empleado"
+        android:id="@+id/btnBuscar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1. Registrar Empleado (Alta)"
-        android:layout_marginBottom="8dp"/>
-    <Button
-        android:id="@+id/btn_consultar_empleado"
+        android:text="Buscar Vendedor"/>
+
+    <TextView
+        android:id="@+id/tvResultado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2. Consultar Empleado"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginTop="24dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text=""/>
 
 </LinearLayout>
