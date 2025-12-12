@@ -36,5 +36,12 @@
         android:layout_height="wrap_content"
         android:text="2. Consultar Empleado"
         android:layout_marginBottom="8dp"/>
+    <Button
+        android:id="@+id/btn_listar_empleado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. Listar y Buscar Vendedor (Filtro Dinámico)"
+        android:layout_marginBottom="8dp"/>
+
 
 </LinearLayout>

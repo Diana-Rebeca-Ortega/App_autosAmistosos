@@ -79,12 +79,22 @@ public class ConsultaEmpleadoActivity extends AppCompatActivity {
                             if (success == 1) {
                                 // Vendedor encontrado
                                 JSONObject vendedor = jsonObject.getJSONObject("vendedor");
+                                String apellido2 = vendedor.getString("apellido2");
+                                String apellidosFormateados;
 
+                                // Usamos isNull() para chequear si el valor JSON es null y también chequeamos la cadena literal "null"
+                                if (vendedor.isNull("apellido2") || apellido2.equals("null") || apellido2.isEmpty()) {
+                                    // Si el segundo apellido es nulo o vacío, solo mostramos el Apellido1
+                                    apellidosFormateados = vendedor.getString("apellido1");
+                                } else {
+                                    // Si hay segundo apellido, mostramos ambos
+                                    apellidosFormateados = vendedor.getString("apellido1") + " " + apellido2;
+                                }
                                 // Formatear el resultado para mostrar en el TextView
                                 String resultado = "✅ Vendedor Encontrado:\n\n" +
                                         "ID: " + vendedor.getString("idVendedor") + "\n" +
                                         "Nombre: " + vendedor.getString("nombre") + "\n" +
-                                        "Apellidos: " + vendedor.getString("apellido1") + " " + vendedor.getString("apellido2") + "\n" +
+                                        "Apellidos: " + apellidosFormateados + "\n" +
                                         "Salario Base: $" + vendedor.getString("salario_base") + "\n" +
                                         "Comisión: " + (Double.parseDouble(vendedor.getString("porcentaje_comision")) * 100) + " %";
 
